@@ -1,11 +1,9 @@
-/* 自定义字体和基础样式 */
 .minecraft-font {
     font-family: 'Orbitron', 'JetBrains Mono', monospace;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-/* 发光文字效果 */
 .glow-text {
     text-shadow: 
         0 0 5px rgba(147, 51, 234, 0.8),
@@ -32,7 +30,6 @@
     }
 }
 
-/* 像素发光效果 */
 .pixel-glow {
     box-shadow: 
         0 0 10px rgba(147, 51, 234, 0.6),
@@ -56,7 +53,6 @@
     }
 }
 
-/* 慢脉冲动画 */
 .animate-pulse-slow {
     animation: pulse-slow 4s ease-in-out infinite;
 }
@@ -72,7 +68,6 @@
     }
 }
 
-/* 导航链接样式 */
 .nav-link {
     position: relative;
     padding: 0.5rem 1rem;
@@ -102,7 +97,6 @@
     width: 80%;
 }
 
-/* 服务器IP卡片样式 */
 .server-ip-card {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(139, 92, 246, 0.1));
     border: 2px solid transparent;
@@ -146,7 +140,6 @@
     }
 }
 
-/* Minecraft 按钮样式 */
 .minecraft-button {
     position: relative;
     overflow: hidden;
@@ -181,7 +174,6 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-/* 游戏模式卡片样式 */
 .game-mode-card {
     position: relative;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(139, 92, 246, 0.1));
@@ -226,7 +218,6 @@
         inset 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* 特色功能卡片样式 */
 .feature-card {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(139, 92, 246, 0.1));
     border: 1px solid rgba(139, 92, 246, 0.3);
@@ -243,7 +234,6 @@
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
 }
 
-/* 粒子背景 */
 #particles {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="40" r="1" fill="%238b5cf6" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/></circle><circle cx="50" cy="80" r="1" fill="%2306b6d4" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="5s" repeatCount="indefinite"/></circle></svg>') repeat;
     animation: float 20s ease-in-out infinite;
@@ -258,12 +248,10 @@
     }
 }
 
-/* 滚动平滑 */
 html {
     scroll-behavior: smooth;
 }
 
-/* 自定义滚动条 */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -281,7 +269,6 @@ html {
     background: linear-gradient(to bottom, #7c3aed, #0891b2);
 }
 
-/* Toast 通知样式 */
 #toast {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(34, 197, 94, 0.3);
@@ -291,7 +278,6 @@ html {
     transform: translateX(0);
 }
 
-/* 响应式设计优化 */
 @media (max-width: 768px) {
     .game-mode-card {
         height: auto;
@@ -326,7 +312,6 @@ html {
     }
 }
 
-/* 移动端菜单样式 */
 #mobile-menu {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(139, 92, 246, 0.1));
     backdrop-filter: blur(10px);
@@ -349,7 +334,6 @@ html {
     border-bottom: none;
 }
 
-/* 加载动画 */
 @keyframes loading {
     0% {
         transform: rotate(0deg);
@@ -363,7 +347,6 @@ html {
     animation: loading 1s linear infinite;
 }
 
-/* 进入动画 */
 .fade-in-up {
     animation: fadeInUp 0.8s ease-out;
 }
@@ -379,14 +362,12 @@ html {
     }
 }
 
-/* 图片优化 */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* 性能优化 */
 * {
     will-change: auto;
 }
@@ -397,7 +378,6 @@ img {
     will-change: transform;
 }
 
-/* 高对比度支持 */
 @media (prefers-contrast: high) {
     .game-mode-card,
     .feature-card {
@@ -410,7 +390,6 @@ img {
     }
 }
 
-/* 减少动画支持 */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -419,4 +398,28 @@ img {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+.nav-link.rules-link {
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-link.rules-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #fbbf24, #f59e0b);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link.rules-link:hover::after {
+    transform: scaleX(1);
 }
