@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmethystPvP - 顶级 Minecraft 服务器</title>
+    <title>AmethystPvP - 一个有趣的PvP服务器</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="https://minecraft.wiki/images/thumb/f/f7/Amethyst_Cluster_JE2_BE1.png/32px-Amethyst_Cluster_JE2_BE1.png">
 </head>
 <body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white overflow-x-hidden">
-    <!-- 动态背景粒子 -->
     <div id="particles" class="fixed inset-0 z-0"></div>
     
-    <!-- 主要内容容器 -->
     <div class="relative z-10">
-        <!-- 导航栏 -->
         <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-30 backdrop-blur-md border-b border-purple-500">
             <div class="container mx-auto px-6 py-4">
                 <div class="flex items-center justify-between">
@@ -28,6 +25,7 @@
                         <a href="#gamemodes" class="nav-link">游戏模式</a>
                         <a href="#features" class="nav-link">特色功能</a>
                         <a href="#join" class="nav-link">立即加入</a>
+                        <a href="amethystpvp.github.io/rules" target="_blank" class="nav-link text-yellow-400 hover:text-yellow-300">服务器规则</a>
                     </div>
                     <button class="md:hidden text-white" id="mobile-menu-btn">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +36,6 @@
             </div>
         </nav>
 
-        <!-- 英雄区域 -->
         <section id="home" class="min-h-screen flex items-center justify-center relative">
             <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('images/amethyst_bg.webp')"></div>
             <div class="container mx-auto px-6 text-center relative z-10">
@@ -47,7 +44,7 @@
                         Amethyst<span class="text-purple-400">PvP</span>
                     </h1>
                     <p class="text-xl md:text-2xl mb-8 text-cyan-200 font-mono">
-                        体验最刺激的 Minecraft PvP 战斗！加入我们的传奇服务器
+                        体验最刺激的 Minecraft PvP 战斗！加入我们的服务器
                     </p>
                     <div class="bg-black bg-opacity-50 backdrop-blur-md rounded-xl p-6 mb-8 border border-purple-500 server-ip-card">
                         <p class="text-sm text-gray-300 mb-2">服务器IP地址</p>
@@ -70,14 +67,12 @@
             </div>
         </section>
 
-        <!-- 游戏模式区域 -->
         <section id="gamemodes" class="py-20 relative">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 minecraft-font glow-text">
                     游戏模式
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- 职业战争系统 -->
                     <div class="game-mode-card group">
                         <div class="absolute inset-0 bg-cover bg-center opacity-30 rounded-xl" style="background-image: url('images/pvp_arena.png')"></div>
                         <div class="relative z-10 p-6">
@@ -96,7 +91,6 @@
                         </div>
                     </div>
 
-                    <!-- 水晶PVP -->
                     <div class="game-mode-card group">
                         <div class="absolute inset-0 bg-cover bg-center opacity-30 rounded-xl" style="background-image: url('images/crystal_cave.png')"></div>
                         <div class="relative z-10 p-6">
@@ -115,7 +109,6 @@
                         </div>
                     </div>
 
-                    <!-- 重锤PVP -->
                     <div class="game-mode-card group">
                         <div class="absolute inset-0 bg-cover bg-center opacity-30 rounded-xl" style="background-image: url('images/server_lobby.png')"></div>
                         <div class="relative z-10 p-6">
@@ -135,7 +128,6 @@
                         </div>
                     </div>
 
-                    <!-- 剑术FFA -->
                     <div class="game-mode-card group">
                         <div class="absolute inset-0 bg-cover bg-center opacity-30 rounded-xl" style="background-image: url('images/sword_combat.jpg')"></div>
                         <div class="relative z-10 p-6">
@@ -154,7 +146,6 @@
                         </div>
                     </div>
 
-                    <!-- 随机传送 -->
                     <div class="game-mode-card group">
                         <div class="relative z-10 p-6">
                             <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4 flex items-center justify-center pixel-glow">
@@ -172,7 +163,6 @@
                         </div>
                     </div>
 
-                    <!-- 其他模式 -->
                     <div class="game-mode-card group">
                         <div class="relative z-10 p-6">
                             <div class="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mb-4 flex items-center justify-center pixel-glow">
@@ -193,7 +183,6 @@
             </div>
         </section>
 
-        <!-- 特色功能区域 -->
         <section id="features" class="py-20 bg-black bg-opacity-30">
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl md:text-6xl font-bold text-center mb-16 minecraft-font glow-text">
@@ -240,7 +229,6 @@
             </div>
         </section>
 
-        <!-- 加入游戏区域 -->
         <section id="join" class="py-20 relative">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl md:text-6xl font-bold mb-8 minecraft-font glow-text">
@@ -298,7 +286,6 @@
             </div>
         </section>
 
-        <!-- 底部信息 -->
         <footer class="py-12 bg-black bg-opacity-50">
             <div class="container mx-auto px-6 text-center">
                 <div class="flex items-center justify-center space-x-4 mb-6">
@@ -311,7 +298,6 @@
         </footer>
     </div>
 
-    <!-- Toast 通知 -->
     <div id="toast" class="fixed top-20 right-4 z-50 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300">
         <div class="flex items-center space-x-2">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
